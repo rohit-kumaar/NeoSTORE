@@ -1,6 +1,20 @@
 header {
   section[aria-label="primary-header"] {
     padding-block: rem(12.4);
+    .container {
+      h6 {
+        a {
+          &:hover i {
+            opacity: 1;
+          }
+
+          i {
+            opacity: 0;
+            transition: opacity 1s;
+          }
+        }
+      }
+    }
   }
 
   section[aria-label="secondary-header"] {
