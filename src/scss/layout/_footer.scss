@@ -15,7 +15,12 @@ footer {
             }
 
             .search-container {
+              width: 100%;
               padding: rem(2) rem(2) rem(2) rem(17);
+
+              @include media-breakpoint-up(xl) {
+                width: rem(326);
+              }
 
               form {
                 height: rem(48);
@@ -65,5 +70,5 @@ footer {
 }
 
 .container {
-  border: 1px solid #000;
+//   border: 1px solid red;
 }
