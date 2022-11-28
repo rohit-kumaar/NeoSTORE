@@ -14,3 +14,11 @@ function qsAll(selector, parent = document) {
 function qs(selector, parent = document) {
   return parent.querySelector(selector);
 }
+
+$(".owl-carousel").owlCarousel({
+  loop: true,
+  items: 1,
+  dots: false,
+  margin: 10,
+  nav: true,
+});

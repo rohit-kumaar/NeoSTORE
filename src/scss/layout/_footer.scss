@@ -43,15 +43,42 @@ footer {
             }
 
             .contact-info {
+              .mobile-number {
+                a {
+                  text-decoration: none;
+                  &:hover {
+                    text-decoration: underline;
+                  }
+                }
+              }
+
               .social-media {
-                span {
+                a {
                   display: flex;
                   align-items: center;
                   justify-content: center;
                   width: 20px;
                   height: 20px;
+                  background: $secondary;
+                  color: $white;
+
                   i {
                     margin-top: rem(2.2);
+                  }
+                }
+
+                .facebook,
+                .twitter {
+                  &:hover {
+                    background: $white;
+                    color: blue;
+                  }
+                }
+
+                .instagram {
+                  &:hover {
+                    background: $white;
+                    color: red;
                   }
                 }
               }
@@ -70,5 +97,5 @@ footer {
 }
 
 .container {
-//   border: 1px solid red;
+  //   border: 1px solid red;
 }

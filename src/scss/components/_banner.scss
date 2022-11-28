@@ -1,0 +1,51 @@
+.banner {
+  background: #faefe9;
+  height: rem(804);
+
+  .container {
+    .owl-carousel {
+      a {
+        .left {
+          width: 40%;
+
+          h3 {
+            position: relative;
+            font-size: rem(40);
+            &::before {
+              content: "";
+              position: absolute;
+              left: 0;
+              width: rem(3.5);
+              height: 100%;
+              background: $black;
+            }
+          }
+
+          h1 {
+            font-size: rem(70);
+            line-height: 1.178;
+          }
+
+          button {
+            width: 145px;
+            height: 36px;
+            border-radius: 2px;
+            margin-top: 7%;
+          }
+        }
+
+        .right {
+          width: 60%;
+
+          img {
+            width: 84%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.container {
+  //   border: 0.1rem solid red;
+}
