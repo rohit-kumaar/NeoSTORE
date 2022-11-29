@@ -1,0 +1,23 @@
+.furniture-for-every-budget {
+  .container {
+    h2 {
+      @extend %titleFontSize;
+    }
+
+    p {
+      @extend %subTitleFontsAndBottomStyle;
+    }
+
+    .row {
+      [class*="col-"] {
+        .card {
+          &-body {
+            button {
+              width: 145px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
