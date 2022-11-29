@@ -1,0 +1,26 @@
+.trending {
+  .container {
+    h2 {
+      @extend %titleFontSize;
+    }
+
+    p {
+      @extend %subTitleFontsAndBottomStyle;
+    }
+
+    .row {
+      .col-12 {
+        width: rem(235);
+        height: rem(235);
+        padding: 0;
+        @include transition(transform, background-color);
+
+        .card {
+          &-body {
+            color: rgba($black, 0.7);
+          }
+        }
+      }
+    }
+  }
+}
