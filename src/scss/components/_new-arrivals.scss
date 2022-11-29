@@ -1,0 +1,24 @@
+.new-arrivals {
+  .container {
+    .row {
+      div[class*="col-"] {
+        & > div {
+          //   width: 315px;
+          height: 454px;
+        }
+
+        .sofa-style {
+          @include backgroundImage(sofa-style-2021, png);
+        }
+
+        .perfect-fit {
+          @include backgroundImage(perfect-fit-for-your-home, png);
+        }
+
+        .new-collection {
+          @include backgroundImage(new-collection, png);
+        }
+      }
+    }
+  }
+}
