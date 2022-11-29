@@ -1,0 +1,28 @@
+.sign-up-for {
+  min-height: rem(340);
+
+  @include backgroundImage(sign-up-bg, png);
+  background-repeat: no-repeat;
+  background-position: right;
+
+  h2 {
+    font-size: rem(30);
+  }
+
+  form {
+    width: 426px;
+    border-bottom: 0.1rem solid rgba($black, 0.8);
+
+    input {
+      width: 100%;
+      &::placeholder {
+        font-size: rem(20);
+        opacity: 75%;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
