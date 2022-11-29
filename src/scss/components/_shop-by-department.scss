@@ -1,0 +1,49 @@
+.shop-by-department {
+  .container {
+    h2 {
+      @extend %titleFontSize;
+    }
+
+    p {
+      @extend %subTitleFontsAndBottomStyle;
+    }
+
+    .row {
+      .col-12 {
+        width: 188.15px;
+        height: 189.15px;
+        border: 0.5px solid rgba($secondary, 0.3);
+        background-color: $white;
+        @include transition(transform, background-color);
+
+        span {
+          font-size: rem(56);
+          &:before {
+            color: $secondary;
+            @include transition(color);
+          }
+        }
+
+        &:hover {
+          background: $primary;
+          transform: scale(1.1);
+          @include transition(transform);
+
+          span:before {
+            color: $white;
+            @include transition(color);
+          }
+
+          h3 {
+            color: $white;
+            @include transition(color);
+          }
+        }
+
+        h3 {
+          color: $secondary;
+        }
+      }
+    }
+  }
+}

@@ -1,16 +1,37 @@
-%flexCenter {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+// %flexCenter {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
+
+// %flexBetween {
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+// }
+
+// %gridCenter {
+//   display: grid;
+//   place-items: center;
+// }
+
+%titleFontSize {
+  font-size: clamp(1.69rem, calc(1.63rem + 0.28vw), 1.88rem);
 }
 
-%flexBetween {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+%subTitleFontsAndBottomStyle {
+  position: relative;
+  font-size: clamp(0.81rem, calc(0.76rem + 0.28vw), 1rem);
 
-%gridCenter {
-  display: grid;
-  place-items: center;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    width: 40%;
+    height: 1px;
+    background: $black;
+    transform: translate(-50%, -50%);
+  }
 }
