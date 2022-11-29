@@ -1,0 +1,37 @@
+.from-our-blog {
+  .container {
+    h2 {
+      @extend %titleFontSize;
+    }
+
+    & > p {
+      @extend %subTitleFontsAndBottomStyle;
+    }
+
+    .row {
+      [class*="col-"] {
+        @include transition(transform);
+
+        &:hover {
+          transform: scale(1.05);
+          @include transition(transform);
+        }
+
+        .card {
+          &-body {
+            a {
+              color: $black;
+              @include transition(transform, color);
+
+              &:hover {
+                color: $primary;
+                transform: scale(1.05);
+                @include transition(transform, color);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
