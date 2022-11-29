@@ -18,6 +18,20 @@
         }
 
         .card {
+          div {
+            .date {
+              top: rem(20);
+              left: rem(20);
+              width: rem(83);
+              height: rem(83);
+              background: white;
+
+              h2 {
+                border-bottom: 0.1rem solid $black;
+              }
+            }
+          }
+
           &-body {
             a {
               color: $black;
