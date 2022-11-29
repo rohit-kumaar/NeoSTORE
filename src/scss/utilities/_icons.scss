@@ -1,19 +1,23 @@
-
 @font-face {
-  font-family: '#{$icomoon-font-family}';
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?tq94xh');
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?tq94xh#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?tq94xh') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?tq94xh') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?tq94xh##{$icomoon-font-family}') format('svg');
+  font-family: "#{$icomoon-font-family}";
+  src: url("#{$icomoon-font-path}/#{$icomoon-font-family}.eot?9604lw");
+  src: url("#{$icomoon-font-path}/#{$icomoon-font-family}.eot?9604lw#iefix")
+      format("embedded-opentype"),
+    url("#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?9604lw")
+      format("truetype"),
+    url("#{$icomoon-font-path}/#{$icomoon-font-family}.woff?9604lw")
+      format("woff"),
+    url("#{$icomoon-font-path}/#{$icomoon-font-family}.svg?9604lw##{$icomoon-font-family}")
+      format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^="icon-"],
+[class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: '#{$icomoon-font-family}' !important;
+  font-family: "#{$icomoon-font-family}" !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -26,75 +30,100 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-Shape-1 {
+  &:before {
+    content: $icon-Shape-1;
+  }
+}
+.icon-Group-2 {
+  &:before {
+    content: $icon-Group-2;
+  }
+}
+.icon-Vector-2 {
+  &:before {
+    content: $icon-Vector-2;
+  }
+}
+.icon-Vector-1 {
+  &:before {
+    content: $icon-Vector-1;
+  }
+}
+.icon-Vector {
+  &:before {
+    content: $icon-Vector;
+    color: #fff;
+  }
+}
 .icon-table {
   &:before {
-    content: $icon-table;     
+    content: $icon-table;
     color: #fff;
   }
 }
 .icon-lamp {
   &:before {
-    content: $icon-lamp;     
+    content: $icon-lamp;
     color: #7f7f7f;
   }
 }
 .icon-cupboard .path1 {
   &:before {
-    content: $icon-cupboard-path1;  
+    content: $icon-cupboard-path1;
     color: rgb(127, 127, 127);
   }
 }
 .icon-cupboard .path2 {
   &:before {
-    content: $icon-cupboard-path2;  
-    margin-left: -1em;  
+    content: $icon-cupboard-path2;
+    margin-left: -1em;
     color: rgb(127, 127, 127);
   }
 }
 .icon-cupboard .path3 {
   &:before {
-    content: $icon-cupboard-path3;  
-    margin-left: -1em;  
+    content: $icon-cupboard-path3;
+    margin-left: -1em;
     color: rgb(127, 127, 127);
   }
 }
 .icon-cupboard .path4 {
   &:before {
-    content: $icon-cupboard-path4;  
-    margin-left: -1em;  
+    content: $icon-cupboard-path4;
+    margin-left: -1em;
     color: rgb(127, 127, 127);
   }
 }
 .icon-cupboard .path5 {
   &:before {
-    content: $icon-cupboard-path5;  
-    margin-left: -1em;  
+    content: $icon-cupboard-path5;
+    margin-left: -1em;
     color: rgb(255, 255, 255);
   }
 }
 .icon-cupboard .path6 {
   &:before {
-    content: $icon-cupboard-path6;  
-    margin-left: -1em;  
+    content: $icon-cupboard-path6;
+    margin-left: -1em;
     color: rgb(255, 255, 255);
   }
 }
 .icon-sofa {
   &:before {
-    content: $icon-sofa;     
+    content: $icon-sofa;
     color: #7f7f7f;
   }
 }
 .icon-chair {
   &:before {
-    content: $icon-chair;     
+    content: $icon-chair;
     color: #7f7f7f;
   }
 }
 .icon-shape {
   &:before {
-    content: $icon-shape;     
+    content: $icon-shape;
     color: #7f7f7f;
   }
 }
-

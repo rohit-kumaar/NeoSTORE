@@ -21,8 +21,8 @@ $black: hsl(0, 0%, 0%);
 $white: hsl(0, 0%, 100%);
 $primary: hsl(0, 100%, 37%);
 $secondary: hsl(0, 0%, 50%);
-.a{
-    color: #4F4F4F;
+.a {
+  color: #4f4f4f;
 }
 /* ------------------- */
 /* Font weight         */
@@ -70,6 +70,11 @@ $base-rem: 16 !default;
 $icomoon-font-family: "icomoon" !default;
 $icomoon-font-path: "../icons/icomoon" !default;
 
+$icon-Shape-1: "\e90b";
+$icon-Group-2: "\e90c";
+$icon-Vector-2: "\e90d";
+$icon-Vector-1: "\e90e";
+$icon-Vector: "\e90f";
 $icon-table: "\e909";
 $icon-lamp: "\e901";
 $icon-cupboard-path1: "\e902";

@@ -1,0 +1,23 @@
+.neostorefurniture {
+  .container {
+    h2 {
+      @extend %titleFontSize;
+    }
+
+    p {
+      @extend %subTitleFontsAndBottomStyle;
+    }
+  }
+
+  &-owl-carousel {
+    .furniture-item {
+      width: 100%;
+      height: rem(320);
+
+      @include media-breakpoint-up(sm) {
+        width: rem(272);
+        height: rem(272);
+      }
+    }
+  }
+}
