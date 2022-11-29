@@ -1,37 +1,71 @@
 /* ------------------- */
 /* Colors Start        */
 /* ------------------- */
-// $colors: (
-//   primary: (
-//     50: hsl(0, 86%, 97%),
-//     100: hsl(0, 93%, 94%),
-//     200: hsl(0, 96%, 89%),
-//     300: hsl(0, 94%, 82%),
-//     400: hsl(0, 91%, 71%),
-//     500: hsl(0, 84%, 60%),
-//     600: hsl(0, 72%, 51%),
-//     700: hsl(0, 74%, 42%),
-//     800: hsl(0, 70%, 35%),
-//     900: hsl(0, 63%, 31%),
-//   ),
-// );
+$colors: (
+  black: (
+    200: hsl(0, 0%, 93%),
+    400: hsl(0, 0%, 75%),
+    500: hsl(0, 0%, 50%),
+    600: hsl(0, 0%, 31%),
+    700: hsl(0, 0%, 20%),
+    800: hsl(330, 3%, 15%),
+    900: hsl(0, 0%, 7%),
+  ),
+);
 
 // @each key, value in $colors
-// @each $color, $shades in $colors {
-//   @each $shade, $value in $shades {
-//     .bg-#{$color}-#{$shade} {
-//       background: $value;
-//     }
-//   }
-// }
+@each $color, $shades in $colors {
+  @each $shade, $value in $shades {
+    .bg-#{$color}-#{$shade} {
+      background: $value;
+    }
+  }
+}
 
-// @each $color, $shades in $colors {
-//   @each $shade, $value in $shades {
-//     .text-#{$color}-#{$shade} {
-//       color: $value;
-//     }
-//   }
-// }
+@each $color, $shades in $colors {
+  @each $shade, $value in $shades {
+    .text-#{$color}-#{$shade} {
+      color: $value;
+    }
+  }
+}
+
+$red: hsl(0, 82%, 51%);
+$lightRed: hsl(0, 99%, 62%);
+$darkRed: hsl(0, 100%, 31%);
+$yellow: hsl(44, 100%, 50%);
+
+.bg-red {
+  background: $red;
+}
+
+.bg-lightRed {
+  background: $lightRed;
+}
+
+.bg-darkRed {
+  background: $darkRed;
+}
+
+.bg-yellow {
+  background: $yellow;
+}
+
+.text-red {
+  color: $red;
+}
+
+.text-lightRed {
+  color: $lightRed;
+}
+
+.text-darkRed {
+  color: $darkRed;
+}
+
+.text-yellow {
+  color: $yellow;
+}
 
 /* ------------------- */
 /* Font weights Start          */
