@@ -3,7 +3,7 @@
 @import "node_modules/bootstrap/scss/mixins";
 
 @mixin transition($props1, $props2: _) {
-  transition: $props1 1s ease-in-out, $props2 1s ease-in-out;
+  transition: $props1 500ms ease-in-out, $props2 500ms ease-in-out;
 }
 
 @mixin backgroundImage($props, $extension) {

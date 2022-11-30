@@ -34,6 +34,7 @@ $red: hsl(0, 82%, 51%);
 $lightRed: hsl(0, 99%, 62%);
 $darkRed: hsl(0, 100%, 31%);
 $yellow: hsl(44, 100%, 50%);
+$lightGreen: hsl(129, 43%, 55%);
 
 .bg-red {
   background: $red;
@@ -51,6 +52,10 @@ $yellow: hsl(44, 100%, 50%);
   background: $yellow;
 }
 
+.bg-lightGreen {
+  background: $lightGreen;
+}
+
 .text-red {
   color: $red;
 }
@@ -65,6 +70,10 @@ $yellow: hsl(44, 100%, 50%);
 
 .text-yellow {
   color: $yellow;
+}
+
+.text-lightGreen {
+  color: $lightGreen;
 }
 
 /* ------------------- */
