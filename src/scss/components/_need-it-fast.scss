@@ -3,8 +3,6 @@
 
   &__right {
     .card {
-      overflow: hidden;
-
       img {
         width: 100%;
         @include transition(transform);

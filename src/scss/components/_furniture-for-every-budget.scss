@@ -3,8 +3,6 @@
     .row {
       [class*="col-"] {
         .card {
-          overflow: hidden;
-
           img {
             @include transition(transform);
 

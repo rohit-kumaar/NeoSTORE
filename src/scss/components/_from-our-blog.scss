@@ -12,8 +12,6 @@
     .row {
       [class*="col-"] {
         .card {
-          overflow: hidden;
-
           div {
             .date {
               top: rem(20);
