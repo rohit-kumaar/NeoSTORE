@@ -141,3 +141,15 @@ $z-indexes: (
     }
   }
 }
+
+.title-container {
+  margin-top: 100px;
+
+  h2 {
+    @extend %titleFontSize;
+  }
+
+  p {
+    @extend %subTitleFontsAndBottomStyle;
+  }
+}

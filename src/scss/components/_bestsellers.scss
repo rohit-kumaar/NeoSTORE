@@ -1,13 +1,6 @@
 .bestsellers {
+  margin-bottom: 100px;
   .container {
-    h2 {
-      @extend %titleFontSize;
-    }
-
-    p {
-      @extend %subTitleFontsAndBottomStyle;
-    }
-
     .row {
       .heart,
       .vector-2 {

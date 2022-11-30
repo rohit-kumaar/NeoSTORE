@@ -1,13 +1,5 @@
 .furniture-for-every-budget {
   .container {
-    h2 {
-      @extend %titleFontSize;
-    }
-
-    p {
-      @extend %subTitleFontsAndBottomStyle;
-    }
-
     .row {
       [class*="col-"] {
         border: 0.1rem solid $white;

@@ -11,9 +11,9 @@
   &::after {
     content: "";
     position: absolute;
+    top: 44px;
     left: 50%;
     right: 50%;
-    bottom: 0;
     width: 40%;
     height: 1px;
     background: $black;

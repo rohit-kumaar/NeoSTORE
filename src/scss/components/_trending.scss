@@ -1,13 +1,5 @@
 .trending {
   .container {
-    h2 {
-      @extend %titleFontSize;
-    }
-
-    p {
-      @extend %subTitleFontsAndBottomStyle;
-    }
-
     .row {
       .col-12 {
         width: rem(235);

@@ -1,13 +1,5 @@
 .from-our-blog {
   .container {
-    h2 {
-      @extend %titleFontSize;
-    }
-
-    & > p {
-      @extend %subTitleFontsAndBottomStyle;
-    }
-
     .row {
       [class*="col-"] {
         @include transition(transform);
