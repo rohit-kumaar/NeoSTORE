@@ -3,7 +3,8 @@
   height: rem(804);
 
   .container {
-    .owl-carousel {
+    .banner-owl-carousel {
+      position: relative;
       a {
         .left {
           width: 40%;
@@ -39,6 +40,35 @@
 
           img {
             width: 84%;
+          }
+        }
+      }
+
+      .owl-nav {
+        position: absolute;
+        top: 40%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        .owl {
+          &-prev,
+          &-next {
+            position: absolute;
+            color: $black-800;
+            font-size: 36px;
+
+            &:hover {
+              background: transparent;
+            }
+          }
+
+          &-prev {
+            left: -50px;
+          }
+
+          &-next {
+            right: -50px;
           }
         }
       }
