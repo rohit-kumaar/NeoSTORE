@@ -8,7 +8,8 @@
         "minifyjs",
         "Neostore",
         "neostorefurniture",
-        "Sitewide"
+        "Sitewide",
+        "Soleil"
     ],
     "liveServer.settings.port": 5501
 }
