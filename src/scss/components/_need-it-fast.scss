@@ -2,11 +2,21 @@
   $needItFast: ".need-it-fast";
 
   &__right {
-    img {
-      width: 100%;
+    .card {
+      overflow: hidden;
 
-      @include media-breakpoint-up(lg) {
-        height: 326px;
+      img {
+        width: 100%;
+        @include transition(transform);
+
+        &:hover {
+          @include scale();
+          @include transition(transform);
+        }
+
+        @include media-breakpoint-up(lg) {
+          height: 326px;
+        }
       }
     }
   }
@@ -16,10 +26,6 @@
 
     & > img {
       width: 100%;
-
-      @include media-breakpoint-up(lg) {
-        // width: auto;
-      }
     }
   }
 
@@ -42,8 +48,12 @@
 
       a {
         color: $white;
+        @include transition(transform, color);
+
         &:hover {
           color: $black;
+          @include scale();
+          @include transition(transform, color);
         }
       }
     }

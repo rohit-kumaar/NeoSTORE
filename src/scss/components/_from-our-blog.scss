@@ -1,22 +1,26 @@
 .from-our-blog {
+  &__image {
+    @include transition(transform);
+
+    &:hover {
+      @include scale();
+      @include transition(transform);
+    }
+  }
+
   .container {
     .row {
       [class*="col-"] {
-        @include transition(transform);
-
-        &:hover {
-          transform: scale(1.05);
-          @include transition(transform);
-        }
-
         .card {
+          overflow: hidden;
+
           div {
             .date {
               top: rem(20);
               left: rem(20);
               width: rem(83);
               height: rem(83);
-              background: white;
+              background: $white;
 
               h2 {
                 border-bottom: 0.1rem solid $black;
@@ -31,7 +35,8 @@
 
               &:hover {
                 color: $primary;
-                transform: scale(1.05);
+
+                @include scale();
                 @include transition(transform, color);
               }
             }

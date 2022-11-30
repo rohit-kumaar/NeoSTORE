@@ -4,6 +4,18 @@
       div[class*="col-"] {
         & > div {
           height: 454px;
+
+          a {
+            color: $white;
+            @include transition(transform, color);
+
+            &:hover {
+              color: $primary;
+
+              @include scale();
+              @include transition(transform, color);
+            }
+          }
         }
 
         .sofa-style {

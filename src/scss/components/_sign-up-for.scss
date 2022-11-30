@@ -11,7 +11,6 @@
 
     form {
       width: 100%;
-      border-bottom: 0.1rem solid rgba($black, 0.8);
 
       @include media-breakpoint-up(sm) {
         width: 426px;
@@ -19,6 +18,8 @@
 
       input {
         width: 100%;
+        border: none;
+        border-bottom: 0.1rem solid rgba($black, 0.8);
         &::placeholder {
           font-size: rem(20);
           color: $black-500;
@@ -26,7 +27,13 @@
 
         &:focus {
           outline: none;
+          border-bottom: 0.1rem solid rgba($primary, 0.8);
         }
+      }
+
+      button {
+        border: none;
+        border-bottom: 0.1rem solid rgba($black, 0.8);
       }
     }
   }

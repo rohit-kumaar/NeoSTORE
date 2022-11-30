@@ -6,6 +6,10 @@
   transition: $props1 500ms ease-in-out, $props2 500ms ease-in-out;
 }
 
+@mixin scale($props: 1.05) {
+  transform: scale($props);
+}
+
 @mixin backgroundImage($props, $extension) {
   background: url(../images/#{$props}.#{$extension}) no-repeat center
     center/cover;

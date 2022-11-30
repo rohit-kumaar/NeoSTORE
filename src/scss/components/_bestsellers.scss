@@ -7,6 +7,12 @@
         width: 40px;
         height: 40px;
         border: 0.1rem solid $black-400;
+        color: $black !important;
+
+        &:hover {
+          border: none !important;
+          color: $primary !important;
+        }
       }
     }
   }

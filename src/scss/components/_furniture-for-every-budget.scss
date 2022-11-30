@@ -2,17 +2,18 @@
   .container {
     .row {
       [class*="col-"] {
-        border: 0.1rem solid $white;
-        @include transition(border);
-        border-top: 0;
-
-        &:hover {
-          border: 0.1rem solid $primary;
-          @include transition(border);
-          border-top: 0;
-        }
-
         .card {
+          overflow: hidden;
+
+          img {
+            @include transition(transform);
+
+            &:hover {
+              @include scale();
+              @include transition(transform);
+            }
+          }
+
           &-body {
             button {
               width: 145px;
