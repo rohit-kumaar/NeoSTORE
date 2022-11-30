@@ -1,0 +1,24 @@
+.bestsellers {
+  .container {
+    h2 {
+      @extend %titleFontSize;
+    }
+
+    p {
+      @extend %subTitleFontsAndBottomStyle;
+    }
+
+    .row {
+      .heart,
+      .vector-2 {
+        width: 40px;
+        height: 40px;
+        border: 0.1rem solid $black-400;
+      }
+    }
+  }
+}
+
+// * {
+//   border: 0.1rem solid green;
+// }
