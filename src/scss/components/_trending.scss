@@ -1,10 +1,12 @@
 .trending {
   .container {
     .row {
+      @include media-breakpoint-up(xl) {
+        display: grid !important;
+        grid-template-columns: repeat(5, 1fr);
+      }
+
       .col-12 {
-        width: rem(235);
-        height: rem(235);
-        padding: 0;
         @include transition(transform, background-color);
 
         .card {
@@ -16,3 +18,4 @@
     }
   }
 }
+

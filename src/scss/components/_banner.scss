@@ -54,9 +54,16 @@
         .owl {
           &-prev,
           &-next {
+            display: none;
+            
             position: absolute;
             color: $black-800;
             font-size: 36px;
+
+
+            @include media-breakpoint-up(lg) {
+              display: block;
+            }
 
             &:hover {
               background: transparent;
