@@ -1,5 +1,5 @@
 header {
-  section[aria-label="primary-header"] {
+  div[aria-label="primary-header"] {
     padding-block: rem(12.4);
     .container {
       h6 {
@@ -17,7 +17,7 @@ header {
     }
   }
 
-  section[aria-label="secondary-header"] {
+  div[aria-label="secondary-header"] {
     background: green;
   }
 }

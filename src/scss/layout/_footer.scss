@@ -1,5 +1,5 @@
 footer {
-  section[aria-label="primary-footer"] {
+  div[aria-label="primary-footer"] {
     padding-top: rem(34);
     padding-bottom: rem(55);
     .container {
@@ -89,13 +89,9 @@ footer {
     }
   }
 
-  section[aria-label="secondary-footer"] {
+  div[aria-label="secondary-footer"] {
     div {
       padding-block: rem(16);
     }
   }
-}
-
-.container {
-  //   border: 1px solid red;
 }

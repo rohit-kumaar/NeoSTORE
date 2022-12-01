@@ -2,23 +2,28 @@
   .container {
     .row {
       .col-12 {
-        width: 188.15px;
-        height: 189.15px;
-        border: 0.5px solid rgba($secondary, 0.3);
+        // width: 188.15px;
+        // height: 189.15px;
+
         background-color: $white;
         @include transition(transform, background-color);
 
-        span {
-          font-size: rem(56);
-          &:before {
+        a {
+          padding-block: 46px;
+          border: 0.5px solid rgba($secondary, 0.3);
+
+          span {
+            font-size: rem(56);
+            &:before {
+              color: $secondary;
+              @include transition(color);
+            }
+          }
+
+          h3 {
             color: $secondary;
             @include transition(color);
           }
-        }
-
-        h3 {
-          color: $secondary;
-          @include transition(color);
         }
 
         &:hover {
@@ -26,14 +31,17 @@
           @include scale(1.1);
           @include transition(transform);
 
-          span:before {
-            color: $white;
-            @include transition(color);
-          }
+          a {
+            border: none;
+            span:before {
+              color: $white;
+              @include transition(color);
+            }
 
-          h3 {
-            color: $white;
-            @include transition(color);
+            h3 {
+              color: $white;
+              @include transition(color);
+            }
           }
         }
       }
