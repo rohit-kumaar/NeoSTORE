@@ -1,39 +1,7 @@
 .special-offer {
-  $special-offer: ".special-offer";
-  margin-top: 111px;
+  margin-top: rem(111);
 
   .container {
-    border: 1px solid red;
-    #{$special-offer}__headers {
-      z-index: 5;
-      position: absolute;
-      top: 0.5%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: fit-content;
-
-      @include media-breakpoint-up(lg) {
-        top: -1.6%;
-        left: 11%;
-        transform: none;
-      }
-
-      @include media-breakpoint-up(xl) {
-        top: -5%;
-      }
-
-      h2 {
-        font-size: rem(30);
-        line-height: rem(45);
-      }
-
-      p {
-        width: rem(261);
-        height: rem(59);
-        border-radius: rem(2);
-      }
-    }
-
     .row {
       [class*="col-"] {
         .card {
@@ -44,6 +12,40 @@
           }
         }
       }
+    }
+  }
+
+  &--border {
+    border: 1px solid $red;
+  }
+
+  &__headers {
+    z-index: 5;
+    position: absolute;
+    top: 0.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: fit-content;
+
+    @include media-breakpoint-up(lg) {
+      top: -1.6%;
+      left: 11%;
+      transform: none;
+    }
+
+    @include media-breakpoint-up(xl) {
+      top: -5%;
+    }
+
+    h2 {
+      font-size: rem(30);
+      line-height: rem(45);
+    }
+
+    p {
+      width: rem(261);
+      height: rem(59);
+      border-radius: rem(2);
     }
   }
 }

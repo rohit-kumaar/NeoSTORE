@@ -1,3 +1,20 @@
+%flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%flexBetween {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+%gridCenter {
+  display: grid;
+  place-items: center;
+}
+
 %titleFontSize {
   font-size: clamp(1.69rem, calc(1.63rem + 0.28vw), 1.88rem);
   text-align: center;

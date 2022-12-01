@@ -6,12 +6,24 @@ footer {
       .row {
         .col-12 {
           div {
-            h1 {
+            h2 {
               font-size: rem(30);
             }
 
-            h2 {
+            h3 {
               font-size: rem(15);
+            }
+
+            ul {
+              li {
+                a {
+                  color: $white;
+
+                  &:hover {
+                    font-weight: 700 !important;
+                  }
+                }
+              }
             }
 
             .search-container {

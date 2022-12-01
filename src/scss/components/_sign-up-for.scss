@@ -4,7 +4,10 @@
   background-position: right;
 
   .container {
-    min-height: rem(340);
+    & > div {
+      min-height: rem(340);
+    }
+
     h2 {
       font-size: rem(30);
     }

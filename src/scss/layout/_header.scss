@@ -1,16 +1,16 @@
 header {
   div[aria-label="primary-header"] {
-    padding-block: rem(12.4);
     .container {
+      padding-block: rem(12.4);
       h6 {
         a {
-          &:hover i {
-            opacity: 1;
-          }
+          color: $white;
+          @include transition(transform, color);
 
-          i {
-            opacity: 0;
-            transition: opacity 1s;
+          &:hover {
+            color: $black;
+            @include scale();
+            @include transition(transform, color);
           }
         }
       }
@@ -18,6 +18,96 @@ header {
   }
 
   div[aria-label="secondary-header"] {
-    background: green;
+    @extend %flexBetween;
+
+    .container {
+      padding-block: rem(17);
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+
+        @include media-breakpoint-up(sm) {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+
+        h1 {
+          font-size: rem(30);
+        }
+
+        nav {
+          display: none;
+
+          @include media-breakpoint-up(lg) {
+            display: block;
+          }
+
+          ul {
+            @extend %flexCenter;
+            gap: rem(40);
+
+            li {
+              a {
+                color: $black-800;
+                font-size: rem(14);
+                font-weight: 300;
+                text-decoration: none;
+
+                &:hover {
+                  font-weight: 400;
+                  color: $black;
+                  text-decoration: underline;
+                }
+              }
+            }
+          }
+        }
+
+        .right {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: rem(19.5);
+
+          form {
+            padding: rem(6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            input {
+              width: 160px;
+
+              &::placeholder {
+                font-size: rem(14);
+              }
+
+              &:focus {
+                outline: none;
+              }
+            }
+          }
+
+          .icons {
+            display: flex;
+            gap: rem(21);
+
+            a {
+              span {
+                color: $black;
+
+                &:hover {
+                  color: $primary;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
