@@ -21,9 +21,9 @@ $(".banner-owl-carousel").owlCarousel({
   dots: false,
   margin: 10,
   nav: true,
-  // autoplay:true,
-  // autoplayTimeout:2000,
-  // autoplayHoverPause:true
+  autoplay: true,
+  autoplayTimeout: 2000,
+  autoplayHoverPause: true,
 });
 
 $(".neostorefurniture-owl-carousel").owlCarousel({
