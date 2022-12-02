@@ -55,7 +55,9 @@ function sidebarMenu() {
 }
 
 function timer() {
-  const countDownDate = new Date("Dec 5, 2022 15:37:25").getTime();
+  let date = 5;
+  const countDownDate = new Date(`Dec ${date} , 2022 15:37:25`).getTime();
+
   const x = setInterval(function () {
     const now = new Date().getTime(),
       distance = countDownDate - now,

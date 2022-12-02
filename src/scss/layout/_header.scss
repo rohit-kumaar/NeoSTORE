@@ -52,6 +52,9 @@ header {
           }
 
           #sideMenu {
+            position: absolute;
+            right: rem(12);
+
             @include media-breakpoint-up(lg) {
               display: none;
             }
@@ -94,25 +97,28 @@ header {
           }
 
           ul {
+            padding-left: 30px;
             display: flex;
-            align-items: center;
             justify-content: center;
             flex-direction: column;
             height: 100%;
-            gap: rem(40);
 
             @include media-breakpoint-up(lg) {
               flex-direction: row;
               height: auto;
+              align-items: center;
+              gap: rem(40);
+              padding-left: 0;
             }
 
             li {
               a {
-                color: $black-800;
+                color: $white;
                 font-size: 30px;
                 text-decoration: none;
 
                 @include media-breakpoint-up(lg) {
+                  color: $black-800;
                   font-size: rem(14);
                   font-weight: 300;
                 }
@@ -170,4 +176,13 @@ header {
       }
     }
   }
+}
+
+.icon-menu-icon:before {
+  color: $primary;
+}
+
+.icon-close-icon:before {
+  font-size: rem(24);
+  color: $white;
 }
