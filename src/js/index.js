@@ -45,3 +45,16 @@ $(".neostorefurniture-owl-carousel").owlCarousel({
     },
   },
 });
+
+const sideMenu = document.querySelector("#sideMenu");
+const sidebar = document.querySelector("#sidebar");
+const closeMenu = document.querySelector("#closeMenu");
+
+sideMenu.addEventListener("click", () => {
+  sidebar.style.display = "block";
+});
+
+closeMenu.addEventListener("click", () => {
+  sidebar.style.display = "none";
+  // location.reload();
+});
