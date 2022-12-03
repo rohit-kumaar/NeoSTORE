@@ -1,5 +1,7 @@
 import { bestSellersDetails } from "./data/bestSellersDetails.js";
+import { shopByDepartmentDetails } from "./data/shopByDepartmentDetails.js";
 
+shopByDepartment(shopByDepartmentDetails);
 timer();
 sidebarMenu();
 owlCarousel();
@@ -132,5 +134,25 @@ function bestSellersProductList(bestSellersDetail) {
   </div>`;
 
     bestSellersProduct.innerHTML += html;
+  });
+}
+
+function shopByDepartment(shopByDepartmentDetail) {
+  const shopByDepartmentProduct = document.getElementById(
+    "shopByDepartmentProduct"
+  );
+
+  shopByDepartmentDetail.forEach((product) => {
+    let html = ` <div class="col-12 col-sm-6 col-md-4 col-xl-2 mb-md-4 mb-xl-0">
+                    <a
+                      href=${product.href}
+                      class="d-flex flex-column align-items-center justify-content-center gap-3 w-100 h-100 text-decoration-none"
+                    >
+                      <span class="icon-${product.icon}"></span>
+                      <h3 class="fw-500 fs-5">${product.product}</h3>
+                    </a>
+                  </div>`;
+
+    shopByDepartmentProduct.innerHTML += html;
   });
 }
