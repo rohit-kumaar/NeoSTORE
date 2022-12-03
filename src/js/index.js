@@ -235,13 +235,13 @@ function fromOurBlog(fromOurBlogDetail) {
                         title=${product.name}
                         class="from-our-blog__image w-100"
                       />
-                      <div
+                      <time
                         class="date position-absolute d-flex flex-column align-items-center justify-content-center"
                         title="Today Date"
                       >
                         <h2 class="fw-bold pb-1 day" ></h2>
                         <h3 class="fw-500 h6 m-0 pt-1 month" ></h3>
-                      </div>
+                      </time>
                     </div>
 
                     <div class="card-body border border-1 border-top-0">
