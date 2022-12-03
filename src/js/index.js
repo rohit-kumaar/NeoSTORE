@@ -116,7 +116,7 @@ function bestSellersProductList(bestSellersDetail) {
               ${product.title}
             </h5>
             <div class="card-text fw-500 fs-14">
-              <s class="text-black-400">${product.price}</s>
+              <del class="text-black-400">${product.price}</del>
               <span class="text-black-800">${product.discount}</span>
             </div>
           </div>

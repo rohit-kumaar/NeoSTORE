@@ -3,12 +3,18 @@
     .row {
       [class*="col-"] {
         .card {
-          img {
-            @include transition(transform);
+          a {
+            img {
+              width: 100%;
+              aspect-ratio: 1 / 1;
+              object-fit: cover;
 
-            &:hover {
-              @include scale();
               @include transition(transform);
+
+              &:hover {
+                @include scale();
+                @include transition(transform);
+              }
             }
           }
 

@@ -28,9 +28,9 @@
   &::after {
     content: "";
     position: absolute;
-    top: 44px;
-    left: 50%;
     right: 50%;
+    bottom: -12px;
+    left: 50%;
     width: 142px;
     height: 1px;
     background: $black;

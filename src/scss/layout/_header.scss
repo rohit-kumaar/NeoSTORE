@@ -98,8 +98,8 @@ header {
 
           ul {
             padding-left: 30px;
+            padding-top: 75px;
             display: flex;
-            justify-content: center;
             flex-direction: column;
             height: 100%;
 
@@ -107,8 +107,10 @@ header {
               flex-direction: row;
               height: auto;
               align-items: center;
+              justify-content: center;
               gap: rem(40);
               padding-left: 0;
+              padding-top: 0;
             }
 
             li {
@@ -134,19 +136,34 @@ header {
         }
 
         .right {
+          width: 100%;
           display: flex;
           align-items: center;
-          justify-content: center;
+          justify-content: space-between;
           gap: rem(19.5);
 
+          @include media-breakpoint-up(lg) {
+            width: fit-content;
+            justify-content: center;
+          }
+
           form {
+            width: 100%;
             padding: rem(6);
             display: flex;
             align-items: center;
             justify-content: center;
 
+            @include media-breakpoint-up(lg) {
+              width: fit-content;
+            }
+
             input {
-              width: 160px;
+              width: inherit;
+
+              @include media-breakpoint-up(lg) {
+                width: 160px;
+              }
 
               &::placeholder {
                 font-size: rem(14);
