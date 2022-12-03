@@ -1,14 +1,16 @@
 import { bestSellersDetails } from "./data/bestSellersDetails.js";
 import { shopByDepartmentDetails } from "./data/shopByDepartmentDetails.js";
 import { specialOfferProductDetails } from "./data/specialOfferProductDetails.js";
+import { fromOurBlogDetails } from "./data/fromOurBlogDetails.js";
 
-sidebarMenu();
-shopByDepartment(shopByDepartmentDetails);
 timer();
+sidebarMenu();
 owlCarousel();
-bestSellersProductList(bestSellersDetails);
-specialOffer(specialOfferProductDetails);
 likeHeartButton();
+fromOurBlog(fromOurBlogDetails);
+specialOffer(specialOfferProductDetails);
+shopByDepartment(shopByDepartmentDetails);
+bestSellersProductList(bestSellersDetails);
 
 function owlCarousel() {
   $(".banner-owl-carousel").owlCarousel({
@@ -216,5 +218,75 @@ function specialOffer(specialOfferProductDetail) {
                   </div>`;
 
     specialOfferProduct.innerHTML += html;
+  });
+}
+
+function fromOurBlog(fromOurBlogDetail) {
+  const fromOurBlogDesc = document.getElementById("fromOurBlogDesc");
+
+  fromOurBlogDetail.forEach((product) => {
+    let html = `<div class="col-12 col-lg-4">
+                  <div class="card border-0 overflow-hidden rounded-0">
+                    <div class="position-relative">
+                      <img
+                        loading="lazy"
+                        src=${product.src}
+                        alt=${product.name}
+                        title=${product.name}
+                        class="from-our-blog__image w-100"
+                      />
+                      <div
+                        class="date position-absolute d-flex flex-column align-items-center justify-content-center"
+                        title="Today Date"
+                      >
+                        <h2 class="fw-bold pb-1 day" ></h2>
+                        <h3 class="fw-500 h6 m-0 pt-1 month" ></h3>
+                      </div>
+                    </div>
+
+                    <div class="card-body border border-1 border-top-0">
+                      <h4 class="fs-12 text-primary text-uppercase text-center">
+                        <b>${product.name}</b>
+                      </h4>
+                      <h3 class="fs-5 fw-500 text-center mt-2">
+                      ${product.type}
+                      </h3>
+                    </div>
+
+                    <article class="card-body border border-1 border-top-0">
+                      <p class="fs-14 fw-300 text-center">
+                      ${product.desc}
+                      </p>
+                      <a
+                        href="javascript:void(0)"
+                        class="fw-500 fs-14 text-center d-block mt-4"
+                        title="Please Check"
+                      >
+                        READ MORE
+                      </a>
+                    </article>
+                  </div>
+                </div>`;
+
+    fromOurBlogDesc.innerHTML += html;
+  });
+
+  const getDateDetails = new Date();
+  const todayDate = getDateDetails.toLocaleString("default", {
+    day: "numeric",
+  });
+  const presentMonth = getDateDetails.toLocaleString("default", {
+    month: "short",
+  });
+
+  const day = document.querySelectorAll(".day");
+  const month = document.querySelectorAll(".month");
+
+  day.forEach((dayEl) => {
+    dayEl.innerText = todayDate;
+  });
+
+  month.forEach((monthEl) => {
+    monthEl.innerHTML = presentMonth;
   });
 }
