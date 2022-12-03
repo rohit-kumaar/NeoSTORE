@@ -1,11 +1,13 @@
 import { bestSellersDetails } from "./data/bestSellersDetails.js";
 import { shopByDepartmentDetails } from "./data/shopByDepartmentDetails.js";
+import { specialOfferProductDetails } from "./data/specialOfferProductDetails.js";
 
+sidebarMenu();
 shopByDepartment(shopByDepartmentDetails);
 timer();
-sidebarMenu();
 owlCarousel();
 bestSellersProductList(bestSellersDetails);
+specialOffer(specialOfferProductDetails);
 likeHeartButton();
 
 function owlCarousel() {
@@ -154,5 +156,65 @@ function shopByDepartment(shopByDepartmentDetail) {
                   </div>`;
 
     shopByDepartmentProduct.innerHTML += html;
+  });
+}
+
+function specialOffer(specialOfferProductDetail) {
+  const specialOfferProduct = document.getElementById("specialOfferProduct");
+
+  specialOfferProductDetail.forEach((product) => {
+    let html = `  <div class="col-12 col-md-6 col-xl-4">
+                    <div class="card border-0">
+                      <div class="card-header bg-transparent border-0">
+                        <a
+                          href=${product.link}
+                          class="text-black-600 fw-500 fs-5 text-decoration-none"
+                          >${product.name}</a
+                        >
+                        <div class="text-primary fw-500 fs-5">₹1200.00</div>
+                      </div>
+
+                      <div class="card-body">
+                        <a href=${product.image.link} title=${product.name}>
+                          <img
+                            loading="lazy"
+                            src=${product.image.source}
+                            alt=${product.name}
+                            class="w-100"
+                          />
+                        </a>
+                      </div>
+
+                      <div class="card-footer bg-transparent border-0 pt-3 pb-4">
+                        <div class="progress">
+                          <div
+                            class="progress-bar ${product.image.progress} bg-lightGreen"
+                            role="progressbar"
+                            aria-label="Basic example"
+                            aria-valuenow="75"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          ></div>
+                        </div>
+
+                        <div
+                          class="d-flex align-items-center justify-content-between mt-2"
+                        >
+                          <span class="fw-500 fs-14 text-black-600"
+                            >Available: ${product.image.available}</span
+                          >
+                          <div>
+                            <span class="icon-full-start"></span>
+                            <span class="icon-full-start"></span>
+                            <span class="icon-full-start"></span>
+                            <span class="icon-full-start"></span>
+                            <span class="icon-half-start"></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>`;
+
+    specialOfferProduct.innerHTML += html;
   });
 }

@@ -9,8 +9,10 @@
         "minifyjs",
         "Neostore",
         "neostorefurniture",
+        "progressbar",
         "Sitewide",
-        "Soleil"
+        "Soleil",
+        "valuenow"
     ],
     "liveServer.settings.port": 5501
 }
