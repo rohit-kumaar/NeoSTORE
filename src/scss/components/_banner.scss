@@ -2,7 +2,7 @@
   @extend %flexCenter;
   position: relative;
   z-index: 1;
-  height: rem(804);
+  height: 804px;
   background: #faefe9;
 
   .container {
@@ -15,20 +15,34 @@
           text-decoration: none;
 
           .left {
-            h3 {
+            > h3 {
+              @extend %flexColumn;
               position: relative;
+              color: $black-900;
               font-size: rem(40);
+
               &::before {
                 content: "";
                 position: absolute;
                 left: 0;
-                width: rem(3.5);
+                width: 3.5px;
                 height: 100%;
                 background: $black;
               }
             }
 
-            h1 {
+            > b {
+              display: inline-block;
+              color: $black-900;
+              font-size: rem(20);
+            }
+
+            > h1 {
+              @extend %flexColumn;
+              color: $black-900;
+              text-transform: uppercase;
+              font-weight: 300;
+
               @include media-breakpoint-up(md) {
                 font-size: rem(70);
                 line-height: 1.178;

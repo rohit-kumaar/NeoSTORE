@@ -28,11 +28,13 @@
     transform: translate(-50%, -50%);
     width: fit-content;
     background-color: $white;
+    align-items: center;
 
     @include media-breakpoint-up(lg) {
       top: -1.6%;
       left: 11%;
       transform: none;
+      display: flex;
     }
 
     @include media-breakpoint-up(xl) {

@@ -4,38 +4,61 @@
   background-position: right;
 
   .container {
-    & > div {
+    > div {
+      @extend %flexCenter;
+      flex-direction: column;
+      position: relative;
       min-height: rem(340);
-    }
 
-    h2 {
-      font-size: rem(30);
-    }
-
-    form {
-      width: 100%;
-      border-bottom: 0.1rem solid rgba($black, 0.8);
-
-      @include media-breakpoint-up(sm) {
-        width: 426px;
+      > h2 {
+        font-size: rem(30);
+        font-weight: 700;
+        text-align: center;
+        color: $black-800;
       }
 
-      input {
+      > p {
+        font-weight: 300;
+        font-size: 20px;
+        color: $black-500;
+        text-align: center;
+      }
+
+      > form {
+        @extend %flexBetween;
         width: 100%;
-        border: none;
+        border-bottom: 0.1rem solid rgba($black, 0.8);
+        font-weight: 300;
+        font-size: rem(20);
 
-        &::placeholder {
-          font-size: rem(20);
-          color: $black-500;
+        @include media-breakpoint-up(sm) {
+          width: 426px;
         }
 
-        &:focus {
-          outline: none;
-        }
-      }
+        > input {
+          width: 100%;
+          border: none;
+          background-color: transparent;
 
-      button {
-        border: none;
+          &::placeholder {
+            font-size: rem(20);
+            color: $black-500;
+          }
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+        > button {
+          border: none;
+          background-color: transparent;
+
+          > span {
+            border: 0;
+            color: $black;
+          }
+        }
       }
     }
   }
