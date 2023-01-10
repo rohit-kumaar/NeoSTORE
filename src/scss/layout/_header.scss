@@ -9,7 +9,7 @@ $header: ".header";
     background-color: $primary;
 
     .container {
-      padding-block: rem(12.4);
+      padding-block: 12.4px;
 
       > div {
         @extend %flexCenter;
@@ -71,8 +71,8 @@ $header: ".header";
           }
 
           @include media-breakpoint-up(lg) {
-            display: block;
             position: static;
+            display: block;
             width: fit-content;
             height: auto;
             background: transparent;
@@ -112,16 +112,17 @@ $header: ".header";
                 font-size: 30px;
                 text-decoration: none;
 
-                &:hover {
-                  font-weight: 400;
-                  color: $black;
-                  text-decoration: underline;
-                }
-
                 @include media-breakpoint-up(lg) {
                   color: $black-800;
                   font-size: rem(14);
                   font-weight: 300;
+                }
+
+                &:hover {
+                  @include media-breakpoint-up(lg) {
+                    text-decoration: underline;
+                    color: $primary;
+                  }
                 }
               }
             }

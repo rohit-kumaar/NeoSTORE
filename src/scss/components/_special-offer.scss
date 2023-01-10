@@ -1,6 +1,5 @@
 .special-offer {
-  position: relative;
-  margin-top: rem(111);
+  margin-top: 111px;
 
   .container {
     .row {
@@ -8,7 +7,7 @@
         .card {
           &-footer {
             .progress {
-              height: rem(6);
+              height: 6px;
             }
           }
         }
@@ -17,7 +16,16 @@
   }
 
   &--border {
+    position: relative;
     border: 1px solid $red;
+
+    #specialOfferProduct {
+      margin-top: 104px;
+      
+      @include media-breakpoint-up(sm) {
+        margin-top: 62px;
+      }
+    }
   }
 
   &__headers {
@@ -25,35 +33,39 @@
     position: absolute;
     top: 0.5%;
     left: 50%;
+    width: 99%;
     transform: translate(-50%, -50%);
-    width: fit-content;
     background-color: $white;
-    align-items: center;
+    
+    @include media-breakpoint-up(sm) {
+      width: fit-content;
+    }
 
     @include media-breakpoint-up(lg) {
       top: -1.6%;
-      left: 11%;
+      left: 97px;
       transform: none;
       display: flex;
+      align-items: center;
     }
 
     @include media-breakpoint-up(xl) {
       top: -5%;
     }
 
-    h2 {
+    > h2 {
       font-size: rem(30);
-      line-height: rem(45);
+      line-height: 45px;
       color: $black-800;
       font-weight: 700;
       text-transform: uppercase;
     }
 
-    p {
+    > p {
       @extend %flexCenter;
-      width: rem(261);
-      height: rem(59);
-      border-radius: rem(2);
+      width: 261px;
+      height: 59px;
+      border-radius: 2px;
       background-color: $primary;
       color: $white;
       font-weight: 500;
