@@ -3,6 +3,10 @@
     .row {
       [class*="col-"] {
         .card {
+          border: 0;
+          overflow: hidden;
+          border-radius: 0;
+
           a {
             img {
               width: 100%;
@@ -19,6 +23,10 @@
           }
 
           &-body {
+            @extend %flexBetween;
+            flex-direction: column;
+            background-color: $black-200;
+
             button {
               width: 145px;
             }

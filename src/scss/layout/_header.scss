@@ -1,37 +1,51 @@
-header {
+$header: ".header";
+
+.header {
   position: sticky;
   top: 0;
   z-index: 10;
 
-  div[aria-label="primary-header"] {
+  &__primary {
+    background-color: $primary;
+
     .container {
       padding-block: rem(12.4);
-      h6 {
-        a {
-          color: $white;
-          @include transition(transform, color);
 
-          &:hover {
-            color: $black;
-            @include scale();
+      > div {
+        @extend %flexCenter;
+
+        #{$header}__markdown {
+          margin: 0;
+          color: $white;
+          text-align: center;
+          font-weight: 700;
+
+          > a {
+            color: $white;
             @include transition(transform, color);
+
+            &:hover {
+              color: $black;
+              @include scale();
+              @include transition(transform, color);
+            }
           }
         }
       }
     }
   }
 
-  div[aria-label="secondary-header"] {
+  &__secondary {
     @extend %flexBetween;
+    background-color: $white;
+    box-shadow: 0 2px 18px 1px #faefe9;
 
     .container {
-      padding-block: rem(17);
+      padding-block: 17px;
 
-      .content {
-        display: flex;
+      .nav {
+        @extend %flexCenter;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
         gap: 20px;
 
         @include media-breakpoint-up(sm) {
@@ -39,29 +53,7 @@ header {
           justify-content: space-between;
         }
 
-        h1 {
-          font-size: rem(30);
-          width: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-
-          @include media-breakpoint-up(lg) {
-            display: block;
-            width: fit-content;
-          }
-
-          #sideMenu {
-            position: absolute;
-            right: rem(12);
-
-            @include media-breakpoint-up(lg) {
-              display: none;
-            }
-          }
-        }
-
-        nav {
+        #sidebar {
           display: none;
           position: fixed;
           top: 0;
@@ -90,6 +82,8 @@ header {
             position: absolute;
             right: 11%;
             top: 5%;
+            border: 0;
+            background-color: transparent;
 
             @include media-breakpoint-up(lg) {
               display: none;
@@ -97,10 +91,9 @@ header {
           }
 
           ul {
+            @extend %flexColumn;
             padding-left: 30px;
             padding-top: 75px;
-            display: flex;
-            flex-direction: column;
             height: 100%;
 
             @include media-breakpoint-up(lg) {
@@ -108,7 +101,7 @@ header {
               height: auto;
               align-items: center;
               justify-content: center;
-              gap: rem(40);
+              gap: 40px;
               padding-left: 0;
               padding-top: 0;
             }
@@ -119,16 +112,16 @@ header {
                 font-size: 30px;
                 text-decoration: none;
 
-                @include media-breakpoint-up(lg) {
-                  color: $black-800;
-                  font-size: rem(14);
-                  font-weight: 300;
-                }
-
                 &:hover {
                   font-weight: 400;
                   color: $black;
                   text-decoration: underline;
+                }
+
+                @include media-breakpoint-up(lg) {
+                  color: $black-800;
+                  font-size: rem(14);
+                  font-weight: 300;
                 }
               }
             }
@@ -136,10 +129,8 @@ header {
         }
 
         .right {
+          @extend %flexBetween;
           width: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
           gap: rem(19.5);
 
           @include media-breakpoint-up(lg) {
@@ -147,23 +138,23 @@ header {
             justify-content: center;
           }
 
-          form {
+          > form {
+            @extend %flexCenter;
             width: 100%;
-            padding: rem(6);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            padding-block: 6px;
+            padding-right: 10.51px;
+            border-radius: 5px;
+            background-color: $black-200;
 
             @include media-breakpoint-up(lg) {
-              width: fit-content;
+              width: 160px;
             }
 
-            input {
-              width: inherit;
-
-              @include media-breakpoint-up(lg) {
-                width: 160px;
-              }
+            > input {
+              width: 100%;
+              padding-inline: 9px;
+              background-color: $black-200;
+              border: 0;
 
               &::placeholder {
                 font-size: rem(14);
@@ -173,6 +164,10 @@ header {
                 outline: none;
               }
             }
+
+            > button {
+              border: 0;
+            }
           }
 
           .icons {
@@ -180,6 +175,7 @@ header {
             gap: rem(21);
 
             a {
+              text-decoration: none;
               span {
                 color: $black;
 

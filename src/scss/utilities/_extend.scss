@@ -1,3 +1,8 @@
+%flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
 %flexCenter {
   display: flex;
   align-items: center;
@@ -18,18 +23,24 @@
 %titleFontSize {
   font-size: clamp(1.69rem, calc(1.63rem + 0.28vw), 1.88rem);
   text-align: center;
+  line-height: 45px;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 %subTitleFontsAndBottomStyle {
   position: relative;
   font-size: clamp(0.81rem, calc(0.76rem + 0.28vw), 1rem);
   text-align: center;
+  font-weight: 500;
+  line-height: 20px;
+  color: $black-500;
 
   &::after {
     content: "";
     position: absolute;
     right: 50%;
-    bottom: -12px;
+    top: 40px;
     left: 50%;
     width: 142px;
     height: 1px;

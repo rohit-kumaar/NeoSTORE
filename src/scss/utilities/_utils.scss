@@ -144,7 +144,7 @@ $z-indexes: (
 
 .title-container {
   margin-top: 100px;
-  margin-bottom: 50px;
+  margin-bottom: 70px;
 
   h2 {
     @extend %titleFontSize;
@@ -155,7 +155,13 @@ $z-indexes: (
   }
 }
 
-.button-hover {
+.btn {
+  min-width: 98px;
+  padding-block: 5px;
+  border-radius: 2px;
+}
+
+.btn-hover {
   background-color: $primary !important;
   color: $white !important;
 
@@ -164,5 +170,34 @@ $z-indexes: (
     color: $primary !important;
     background: $white !important;
     font-weight: 500;
+  }
+}
+
+.logo {
+  @extend %flexBetween;
+  width: 100%;
+  color: $primary;
+  font-size: rem(30);
+  font-weight: 700;
+  text-decoration: none;
+
+  &:hover {
+    color: $primary;
+  }
+
+  @include media-breakpoint-up(lg) {
+    display: block;
+    width: fit-content;
+  }
+
+  #sideMenu {
+    position: absolute;
+    right: 12px;
+    border: 0;
+    background-color: transparent;
+
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
   }
 }

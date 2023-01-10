@@ -1,4 +1,5 @@
 .special-offer {
+  position: relative;
   margin-top: rem(111);
 
   .container {
@@ -26,6 +27,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: fit-content;
+    background-color: $white;
 
     @include media-breakpoint-up(lg) {
       top: -1.6%;
@@ -40,12 +42,19 @@
     h2 {
       font-size: rem(30);
       line-height: rem(45);
+      color: $black-800;
+      font-weight: 700;
+      text-transform: uppercase;
     }
 
     p {
+      @extend %flexCenter;
       width: rem(261);
       height: rem(59);
       border-radius: rem(2);
+      background-color: $primary;
+      color: $white;
+      font-weight: 500;
     }
   }
 }

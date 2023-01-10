@@ -19,7 +19,7 @@ function owlCarousel() {
     dots: false,
     margin: 10,
     nav: true,
-    autoplay: true,
+    // autoplay: true,
     autoplayTimeout: 2000,
     autoplayHoverPause: true,
   });
@@ -29,7 +29,10 @@ function owlCarousel() {
     items: 1,
     dots: false,
     margin: 10,
-    nav: false,
+    nav: true,
+    autoplay: true,
+    autoplayTimeout: 2000,
+    autoplayHoverPause: true,
 
     responsive: {
       0: {
@@ -61,8 +64,8 @@ function sidebarMenu() {
 }
 
 function timer() {
-  let date = 5;
-  const countDownDate = new Date(`Dec ${date} , 2022 15:37:25`).getTime();
+  let date = 15;
+  const countDownDate = new Date(`Jan ${date} , 2023 15:37:25`).getTime();
 
   const x = setInterval(function () {
     const now = new Date().getTime(),

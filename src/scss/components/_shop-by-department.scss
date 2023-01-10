@@ -2,13 +2,15 @@
   .container {
     .row {
       .col-12 {
-        // width: 188.15px;
-        // height: 189.15px;
-
         background-color: $white;
         @include transition(transform, background-color);
 
         a {
+          @extend %flexCenter;
+          flex-direction: column;
+          width: 100%;
+          height: 100%;
+          text-decoration: none;
           padding-block: 46px;
           border: 0.5px solid rgba($secondary, 0.3);
 
