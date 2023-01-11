@@ -21,7 +21,8 @@
 }
 
 %titleFontSize {
-  font-size: clamp(1.69rem, calc(1.63rem + 0.28vw), 1.88rem);
+  // font-size: clamp(1.69rem, calc(1.63rem + 0.28vw), 1.88rem);
+
   text-align: center;
   line-height: 45px;
   text-transform: uppercase;
@@ -30,7 +31,7 @@
 
 %subTitleFontsAndBottomStyle {
   position: relative;
-  font-size: clamp(0.81rem, calc(0.76rem + 0.28vw), 1rem);
+  // font-size: clamp(0.81rem, calc(0.76rem + 0.28vw), 1rem);
   text-align: center;
   font-weight: 500;
   line-height: 20px;

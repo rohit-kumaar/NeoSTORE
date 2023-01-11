@@ -2,78 +2,117 @@
   background-color: $black-900;
 
   &__primary {
-    padding-top: rem(34);
-    padding-bottom: rem(55);
+    @extend %flexCenter;
     color: $white;
+    min-height: 367px;
 
-    .container {
-      .row {
-        .col-12 {
-          div {
-            h2 {
-              font-size: rem(30);
-            }
+    .footer__content {
+      display: flex;
+      flex-direction: column;
+      padding-block: 48px;
 
-            h3 {
-              font-size: rem(15);
-            }
+      @include media-breakpoint-up(md) {
+        // padding-block: 0;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
 
-            ul {
-              li {
-                a {
-                  color: $white;
+      > div {
+        text-align: center;
 
-                  &:hover {
-                    font-weight: 700 !important;
-                  }
-                }
-              }
-            }
+        @include media-breakpoint-up(md) {
+          &:nth-child(1) {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
 
-            .search-container {
-              width: 100%;
-              height: 48px;
-              padding: 2px;
-              padding-left: 17px;
-              border-radius: 4px;
-              margin-top: 30px;
-              margin-bottom: 40px;
-              background-color: $white;
+          &:nth-child(2) {
+            width: 50%;
+          }
 
-              @include media-breakpoint-up(xl) {
-                width: 326px;
-              }
+          &:nth-child(3) {
+            width: 50%;
+          }
+          &:nth-child(4) {
+            width: 50%;
+          }
+          &:nth-child(5) {
+            width: 50%;
+          }
+        }
 
-              > form {
-                @extend %flexBetween;
-                height: 100%;
+        @include media-breakpoint-up(lg) {
+          &:nth-child(1) {
+            width: 100%;
+          }
 
-                > i {
-                  color: $primary;
-                }
+          &:nth-child(2) {
+            width: 25%;
+          }
 
-                > input {
-                  width: 100%;
-                  height: 100%;
-                  border: 0;
-                  color: $primary;
-                  font-weight: 500;
+          &:nth-child(3) {
+            width: 25%;
+          }
+          &:nth-child(4) {
+            width: 25%;
+          }
+          &:nth-child(5) {
+            width: 25%;
+          }
+        }
 
-                  &::placeholder {
-                    font-size: rem(14);
-                    color: $primary;
-                    font-weight: 500;
-                  }
+        @include media-breakpoint-up(xl) {
+          text-align: start;
 
-                  &:focus {
-                    outline: none;
-                  }
-                }
+          &:nth-child(1) {
+            display: block;
+            width: 504px;
+          }
 
-                > button {
-                  font-weight: 500;
-                  height: 100%;
-                }
+          &:nth-child(2) {
+            width: 181px;
+          }
+
+          &:nth-child(3) {
+            width: 239px;
+          }
+
+          &:nth-child(4) {
+            width: 202px;
+          }
+          &:nth-child(5) {
+            width: fit-content;
+          }
+        }
+
+        .logo {
+          font-size: rem(30);
+          justify-content: center;
+
+          @include media-breakpoint-up(lg) {
+            width: 100%;
+          }
+        }
+
+        > h3 {
+          font-size: rem(15);
+          font-weight: 700;
+          text-transform: uppercase;
+        }
+
+        ul {
+          @extend %flexColumn;
+          gap: 17px;
+          margin-top: 36px;
+
+          li {
+            a {
+              color: $white;
+
+              &:hover {
+                font-weight: 700 !important;
               }
             }
           }
@@ -83,8 +122,17 @@
   }
 
   &__contact-info {
+    > h6 {
+      font-weight: 300;
+      font-size: 14px;
+      color: $white;
+    }
+
     .mobile-number {
-      a {
+      > a {
+        font-weight: 300;
+        font-size: 14px;
+        color: $white;
         text-decoration: none;
         &:hover {
           text-decoration: underline;
@@ -92,16 +140,33 @@
       }
     }
 
+    > p {
+      font-weight: 300;
+      font-size: 14px;
+      color: $white;
+      margin-top: 5px;
+    }
+
     .social-media {
+      @extend %flexCenter;
+      margin-top: 20px;
+
+      @include media-breakpoint-up(xl) {
+        justify-content: start;
+      }
+
       a {
         @extend %flexCenter;
         width: 20px;
         height: 20px;
+        border-radius: 50px;
         background: $secondary;
         color: $white;
+        text-decoration: none;
 
         i {
-          margin-top: rem(2.2);
+          margin-top: 2.2px;
+          font-size: 10px;
         }
       }
 
@@ -120,6 +185,8 @@
       }
 
       .instagram {
+        margin-inline: 10.87px;
+
         &:hover {
           background: radial-gradient(
             circle at 30% 107%,
@@ -135,9 +202,64 @@
     }
   }
 
-  div[aria-label="secondary-footer"] {
-    div {
-      padding-block: rem(16);
+  &__secondary {
+    @extend %flexCenter;
+    padding-block: 18px;
+    background-color: $primary;
+    font-size: 14px;
+    color: $white;
+    font-weight: 300;
+    line-height: 17px;
+  }
+}
+
+.search-container {
+  width: 100%;
+  height: 48px;
+  padding: 2px;
+  padding-left: 17px;
+  border-radius: 4px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  background-color: $white;
+
+  @include media-breakpoint-up(md) {
+    width: 50%;
+  }
+
+  @include media-breakpoint-up(xl) {
+    width: 326px;
+  }
+
+  > form {
+    @extend %flexBetween;
+    height: 100%;
+
+    > i {
+      color: $primary;
+    }
+
+    > input {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      color: $primary;
+      font-weight: 500;
+
+      &::placeholder {
+        font-size: rem(14);
+        color: $primary;
+        font-weight: 500;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    > button {
+      font-weight: 500;
+      height: 100%;
     }
   }
 }

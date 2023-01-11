@@ -3,8 +3,8 @@
   width: 100%;
   padding-inline: 16px;
   margin-inline: auto;
-}
 
-// .container {
-//   border: 1px solid red;
-// }
+  @include media-breakpoint-up(lg) {
+    padding-inline: 0;
+  }
+}
