@@ -24,9 +24,22 @@
     width: 271px;
     border-radius: 2px;
     background-color: $white;
+    color: $primary;
+    font-weight: 500;
+
+    &:hover {
+      border: 1px solid $white;
+      color: $white;
+    }
 
     @include tablet {
       background-color: $primary;
+      color: $white;
+
+      &:hover {
+        border: 1px solid $primary;
+        color: $primary;
+      }
     }
   }
 
@@ -162,9 +175,13 @@
             }
 
             &:hover {
-              color: $primary;
+              color: $white;
               @include scale();
               @include transition(transform, color);
+
+              @include tablet {
+                color: $primary;
+              }
             }
           }
         }
@@ -193,9 +210,13 @@
       }
 
       &:hover {
-        color: $primary;
+        color: $white;
         @include scale();
         @include transition(transform, color);
+
+        @include tablet {
+          color: $primary;
+        }
       }
     }
   }
