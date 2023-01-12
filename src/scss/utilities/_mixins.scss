@@ -14,3 +14,23 @@
   background: url(../images/#{$props}.#{$extension}) no-repeat center
     center/cover;
 }
+
+// Media Query Start
+@mixin mobile {
+  @include media-breakpoint-up(sm) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @include media-breakpoint-up(md) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @include media-breakpoint-up(lg) {
+    @content;
+  }
+}
+// Media Query End
