@@ -143,10 +143,12 @@ $z-indexes: (
 }
 
 .title-container {
+  @extend %flexCenter;
+  flex-direction: column;
   margin-top: 100px;
-  margin-bottom: 70px;
+  margin-bottom: 50px;
 
-  h2 {
+  > h2 {
     @extend %titleFontSize;
 
     font-size: 22px;
@@ -156,8 +158,15 @@ $z-indexes: (
     }
   }
 
-  p {
+  > p {
     @extend %subTitleFontsAndBottomStyle;
+  }
+
+  > span {
+    width: 142px;
+    height: 1px;
+    background: $black;
+    margin-top: 20px;
   }
 }
 

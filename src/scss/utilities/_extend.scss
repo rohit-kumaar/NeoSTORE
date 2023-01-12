@@ -28,21 +28,10 @@
 }
 
 %subTitleFontsAndBottomStyle {
-  position: relative;
   text-align: center;
   font-weight: 500;
   line-height: 20px;
   color: $black-500;
 
-  &::after {
-    content: "";
-    position: absolute;
-    right: 50%;
-    top: 40px;
-    left: 50%;
-    width: 142px;
-    height: 1px;
-    background: $black;
-    transform: translate(-50%, -50%);
-  }
+  
 }
